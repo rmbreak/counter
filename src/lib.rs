@@ -54,4 +54,14 @@ mod tests {
         assert_eq!(counts[&2], 1);
         assert_eq!(counts[&3], 3);
     }
+
+    #[test]
+    fn slice_str() {
+        let s1 = String::from("two");
+        let l = ["one", "two", "two", &s1];
+        let counts = l.counts();
+
+        assert_eq!(counts[&"one"], 1);
+        assert_eq!(counts[&"two"], 3);
+    }
 }
