@@ -6,8 +6,10 @@ trait Counter {
     fn counts(&self) -> HashMap<&Self::Item, usize>;
 }
 
-impl<'a, T> Counter for &'a [T] where
-    T: Eq + std::hash::Hash {
+impl<'a, T> Counter for &'a [T]
+where
+    T: Eq + std::hash::Hash,
+{
     type Item = T;
 
     fn counts(&self) -> HashMap<&Self::Item, usize> {

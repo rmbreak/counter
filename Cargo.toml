@@ -2,5 +2,6 @@
 name = "counter"
 version = "1.0.0"
 authors = ["Mack Stump <mack.stump@gmail.com>"]
+edition = "2018"
 
 [dependencies]
